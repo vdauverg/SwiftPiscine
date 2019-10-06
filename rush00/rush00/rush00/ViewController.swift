@@ -19,7 +19,31 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func getData() {
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/550?api_key=a6df66754765aab6a38f08284dc49109") else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, res, err) in
+            if let res = res {
+                print("RESULT: ")
+                print(res)
+            }
+            
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print("DATA: ")
+                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
+    
+    @IBAction func test_btn(_ sender: Any) {
+        getData()
+    }
+    
 }
-

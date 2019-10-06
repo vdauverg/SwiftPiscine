@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521D5D5A234986A800489B02 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Network; path = /nfs/2018/v/vdauverg/Desktop/SwiftPiscine/rush00/rush00/rush00/Network; sourceTree = "<absolute>"; };
 		5E6AF6342349553500BF70FA /* rush00.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush00.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6AF6372349553500BF70FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E6AF6392349553500BF70FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				5E6AF63E2349553700BF70FA /* Assets.xcassets */,
 				5E6AF6402349553700BF70FA /* LaunchScreen.storyboard */,
 				5E6AF6432349553700BF70FA /* Info.plist */,
+				521D5D5A234986A800489B02 /* Network */,
 			);
 			path = rush00;
 			sourceTree = "<group>";
