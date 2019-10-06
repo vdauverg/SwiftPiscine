@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         if(isPlaying){return}
         startBtn.isEnabled = false
         pauseBtn.isEnabled = true
+        pauseBtn.setTitle("Pause", for: .normal)
         
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(UpdateTimer), userInfo: nil, repeats: true)
         isPlaying = true
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
     
     @objc func UpdateTimer(){
         counter = counter+0.1
-        let hours = Int(counter / 100) / 120
+        let hours = Int(counter / 10) / 3600
         let minutes = Int(counter / 10) / 60 % 60
         let seconds = Int(counter / 10) % 60
         let milSecs = Int(counter) % 60

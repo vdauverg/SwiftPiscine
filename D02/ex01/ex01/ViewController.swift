@@ -54,14 +54,15 @@ class ViewController: UIViewController {
         timeLabel.text = "25:00"
     }
     @objc func updateTimer(){
+        if counter < 1{
+            timer.invalidate()
+        }else{
         counter = counter-1
         let minutes = Int(counter) / 60
         let seconds = Int(counter) % 60
         
-//        let time = String(format: "%02d:%02d", minutes, seconds)
-//        print(time)
-        
         timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        }
     }
     
     override func viewDidLoad() {

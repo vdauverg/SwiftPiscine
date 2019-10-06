@@ -17,7 +17,9 @@ class ViewController: UIViewController {
         view.layer.addSublayer(emitter)
     }
     func confettiStop(){
-        let emitter = Emitter.get(with: #imageLiteral(resourceName: "confettiArt"), n1: 0)
+        let emitter = Emitter.get(with: #imageLiteral(resourceName: "trollMouth"), n1: 1)
+        emitter.emitterPosition = CGPoint(x: view.frame.width / 2, y: 0)
+        emitter.emitterSize = CGSize(width: view.frame.width/2, height: 2)
         view.layer.addSublayer(emitter)
     }
     
